@@ -1,0 +1,136 @@
+body {
+  color: #9f9;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background-color: #222;
+  color: #cfc;
+}
+
+nav i {
+  color: #9f9;
+}
+
+nav a {
+  color: #9f9;
+}
+
+nav a:hover {
+  color: #cfc;
+}
+
+#content #banner {
+  background-image: url("brick-wall.jpg");
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 840px) {
+  #content #banner {
+    min-height: 500px;
+  }
+}
+
+#content #banner #banner-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #5f5;
+}
+
+#content #banner #banner-text p {
+  visibility: hidden;
+  font-size: 2rem;
+}
+
+@media (min-width: 840px) {
+  #content #banner #banner-text p {
+    font-size: 3rem;
+  }
+}
+
+#content #mission-services {
+  height: 100vh;
+}
+
+@media (max-width: 840px) {
+  #content #mission-services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #content #mission-services .image-container {
+    height: 50vh;
+    background-image: url("stars.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #content #mission-services .text-container {
+    height: 50vh;
+    background-color: #444;
+  }
+  #content #mission-services .text-container .header {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 840px) {
+  #content #mission-services {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+  }
+  #content #mission-services .text-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 50% 50%;
+        grid-template-rows: 50% 50%;
+  }
+  #content #mission-services .text-container div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #444;
+  }
+  #content #mission-services .text-container div .header {
+    font-size: 3em;
+  }
+  #content #mission-services .text-container div .body {
+    font-size: 1.2em;
+    width: 80%;
+    margin: auto;
+  }
+  #content #mission-services .image-container {
+    background-image: url("stars.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+/*# sourceMappingURL=index.css.map */

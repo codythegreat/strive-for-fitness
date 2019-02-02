@@ -1,11 +1,17 @@
-const bannerTextStrings = ['Placeholder1', 'Placeholder2', 'Placeholder3', 'Placeholder4', ];
+const bannerTextStrings = ['Performance', 'Commited', 'Powerful', 'Experienced', ];
 
 animatedBanner = document.getElementById('banner-text').firstChild;
 
 const animateBanner = () => {
+    currentText = 0;
     setInterval(() => {
-        cycleTexts(Math.floor(Math.random()*3));
-    }, 6000)
+        if (currentText >= bannerTextStrings.length - 1) {
+            currentText = 1;
+        } else {
+            currentText++;
+        }
+        cycleTexts(currentText);
+    }, 4000)
     const cycleTexts = (text) => {
         animatedBanner.innerHTML = bannerTextStrings[text];
         animatedBanner.style.visibility = "inherit";
@@ -17,7 +23,7 @@ const animateBanner = () => {
                 animatedBanner.classList.remove('animated', 'slideOutRight');
                 animatedBanner.style.visibility = "hidden";
             }, 500);
-        }, 5000);
+        }, 3000);
     }
     cycleTexts(Math.floor(Math.random()*3));
 }

@@ -37,8 +37,8 @@ nav {
 
 #content {
     #banner {
-        background-image: url("brick-wall.jpg");
-        height: 30vh;
+        background-image: url("weight.jpg");
+        height: 60vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -56,32 +56,37 @@ nav {
             color: #5f5; 
             p {
                 visibility: hidden;
-                font-size: 2rem;
+                font-size: 2.5rem;
                 @include desktop {
-                    font-size: 3rem;
+                    font-size: 5rem;
                 }
             }
         }
     }
 
     #mission-services {
-        height: 100vh;
+        display: grid;
+        
+        .image-container {
+            background-image: url("gym.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         @include mobile {
-            display: flex;
-            flex-direction: column-reverse;
-            .image-container {
-                height: 50vh;
-                background-image: url("stars.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            .text-container {
-                height: 50vh;
-                background-color: #444;
+            grid-template-rows: 1fr 1.5fr 1fr;
+            grid-template-columns: 1fr;
+            .text {
+                background-color: #0E3A21;
+                color: #ccc;
+                text-align: center;
                 .header {
                     font-size: 2em;
                 }
+            }
+            .image-container {
+                grid-row-start: 2;
             }
         }
 
@@ -115,5 +120,5 @@ nav {
                 background-size: cover;
             }
         }
-    }
+    }        
 }

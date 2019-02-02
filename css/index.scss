@@ -36,6 +36,8 @@ nav {
 
 
 #content {
+
+    // Top banner with text animation
     #banner {
         background-image: url("weight.jpg");
         height: 60vh;
@@ -64,6 +66,7 @@ nav {
         }
     }
 
+    // row with mission/service text and image
     #mission-services {
         display: grid;
         
@@ -75,7 +78,7 @@ nav {
         }
 
         @include mobile {
-            grid-template-rows: 1fr 1.5fr 1fr;
+            grid-template-rows: 1fr 1fr auto;
             grid-template-columns: 1fr;
             .text {
                 background-color: #0E3A21;
@@ -93,32 +96,112 @@ nav {
         @include desktop {
             display: grid;
             grid-template-columns: 40% 60%;
+            grid-template-rows: 1fr 1fr;
+            min-height: 50vh;
 
-            .text-container {
-                display: grid;
-                grid-template-rows: 50% 50%;
-                div {
-                    display: flex;
-                    text-align: center;
-                    flex-direction: column;
-                    justify-content: center;
-                    background-color: #444;
-                    .header {
-                        font-size: 3em;
-                    }
-                    .body {
-                        font-size: 1.2em;
-                        width: 80%;
-                        margin: auto;
-                    }
+            .text {
+                background-color: #0E3A21;
+                color: #ccc;
+                padding: 5%;
+
+                .header {
+                    font-size: 5em;
                 }
             }
+
             .image-container {
-                background-image: url("stars.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+                grid-column-start: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
             }
         }
-    }        
+    }
+    
+    // image and training text
+    #training-services {
+        display: grid;
+
+        .image-container {
+            background-image: url("gym.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            .image-container {
+                grid-row-start: 1;
+            }
+            .training-text {
+                grid-row-start: 2;
+                color: #5f5;
+                background-color: #444;
+            }
+        }
+
+        @include desktop {
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 1fr;
+            min-height: 50vh;
+            .image-container {
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+            .training-text {
+                color: #0E3A21;
+                grid-column-start: 2;
+                background-color: #ccc;
+                display: flex;
+                justify-content: center;
+                padding: 5% 10%;
+                .header {
+                    position: absolute;
+                    right: 38%;
+                    font-size: 5em;
+                    padding: 0 10px;
+                    background-color: rgba(255, 255, 255, .5);
+                    border-radius: 10px;
+                }
+            }
+        }
+    }  
+    #testimonial-container {
+        display: flex;
+
+        .image-container {
+            background-image: url("gym.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @include mobile {
+
+        }
+
+        @include desktop {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: #444;
+            .image-container {
+                height: 300px;
+                min-width: 300px;
+                border-radius: 50%;
+                margin: 100px 30px 100px 10vw;
+            }
+            .testimonial-text {
+                margin-right: 10vw;
+                .quote {
+                    font-size: 2em;
+                }
+                .name {
+                    float: right;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }    
 }

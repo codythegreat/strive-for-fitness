@@ -75,8 +75,8 @@ nav a:hover {
 
 @media (max-width: 840px) {
   #content #mission-services {
-    -ms-grid-rows: 1fr 1.5fr 1fr;
-        grid-template-rows: 1fr 1.5fr 1fr;
+    -ms-grid-rows: 1fr 1fr auto;
+        grid-template-rows: 1fr 1fr auto;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
@@ -100,40 +100,137 @@ nav a:hover {
     display: grid;
     -ms-grid-columns: 40% 60%;
         grid-template-columns: 40% 60%;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    min-height: 50vh;
   }
-  #content #mission-services .text-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 50% 50%;
-        grid-template-rows: 50% 50%;
+  #content #mission-services .text {
+    background-color: #0E3A21;
+    color: #ccc;
+    padding: 5%;
   }
-  #content #mission-services .text-container div {
+  #content #mission-services .text .header {
+    font-size: 5em;
+  }
+  #content #mission-services .image-container {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
+#content #training-services {
+  display: -ms-grid;
+  display: grid;
+}
+
+#content #training-services .image-container {
+  background-image: url("gym.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 840px) {
+  #content #training-services {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  #content #training-services .image-container {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  #content #training-services .training-text {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    color: #5f5;
+    background-color: #444;
+  }
+}
+
+@media (min-width: 840px) {
+  #content #training-services {
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    min-height: 50vh;
+  }
+  #content #training-services .image-container {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  #content #training-services .training-text {
+    color: #0E3A21;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    background-color: #ccc;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    text-align: center;
-    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5% 10%;
+  }
+  #content #training-services .training-text .header {
+    position: absolute;
+    right: 38%;
+    font-size: 5em;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+}
+
+#content #testimonial-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#content #testimonial-container .image-container {
+  background-image: url("gym.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 840px) {
+  #content #testimonial-container {
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     background-color: #444;
   }
-  #content #mission-services .text-container div .header {
-    font-size: 3em;
+  #content #testimonial-container .image-container {
+    height: 300px;
+    min-width: 300px;
+    border-radius: 50%;
+    margin: 100px 30px 100px 10vw;
   }
-  #content #mission-services .text-container div .body {
-    font-size: 1.2em;
-    width: 80%;
-    margin: auto;
+  #content #testimonial-container .testimonial-text {
+    margin-right: 10vw;
   }
-  #content #mission-services .image-container {
-    background-image: url("stars.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  #content #testimonial-container .testimonial-text .quote {
+    font-size: 2em;
+  }
+  #content #testimonial-container .testimonial-text .name {
+    float: right;
+    font-size: 1.5em;
   }
 }
 /*# sourceMappingURL=index.css.map */

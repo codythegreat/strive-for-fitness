@@ -61,12 +61,30 @@ nav a:hover {
   }
 }
 
-#content #mission-services {
+#content #mission {
+  background-color: #444;
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  #content #mission .header {
+    font-size: 5em;
+    padding: 50px 0 20px 0;
+    margin: 0;
+  }
+  #content #mission .body {
+    width: 80vw;
+    margin: 0 10vw;
+    padding: 0 0 50px 0;
+  }
+}
+
+#content #services {
   display: -ms-grid;
   display: grid;
 }
 
-#content #mission-services .image-container {
+#content #services .image-container {
   background-image: url("gym.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -74,45 +92,50 @@ nav a:hover {
 }
 
 @media (max-width: 840px) {
-  #content #mission-services {
-    -ms-grid-rows: 1fr 1fr auto;
-        grid-template-rows: 1fr 1fr auto;
+  #content #services {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  #content #mission-services .text {
+  #content #services .text {
     background-color: #0E3A21;
     color: #ccc;
     text-align: center;
   }
-  #content #mission-services .text .header {
+  #content #services .text .header {
     font-size: 2em;
   }
-  #content #mission-services .image-container {
+  #content #services .image-container {
     -ms-grid-row: 2;
         grid-row-start: 2;
   }
 }
 
 @media (min-width: 840px) {
-  #content #mission-services {
+  #content #services {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 40% 60%;
         grid-template-columns: 40% 60%;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
     min-height: 50vh;
   }
-  #content #mission-services .text {
+  #content #services .text {
     background-color: #0E3A21;
     color: #ccc;
-    padding: 5%;
+    padding: 5% 10%;
   }
-  #content #mission-services .text .header {
+  #content #services .text .header {
+    position: absolute;
+    left: 38%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 0 10px;
     font-size: 5em;
   }
-  #content #mission-services .image-container {
+  #content #services .image-container {
     -ms-grid-column: 2;
         grid-column-start: 2;
     -ms-grid-row: 1;

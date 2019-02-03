@@ -66,10 +66,29 @@ nav {
         }
     }
 
-    // row with mission/service text and image
-    #mission-services {
-        display: grid;
+    #mission {
+        background-color: #444;
+        text-align: center;
+
+        @include desktop {
+            .header {
+                font-size: 5em;
+                padding: 50px 0 20px 0;
+                margin: 0;
+            }
+            .body {
+                width: 80vw;
+                margin: 0 10vw;
+                padding: 0 0 50px 0;
+
+            }
+        }
         
+    }
+
+    // row with mission/service text and image
+    #services {
+        display: grid;
         .image-container {
             background-image: url("gym.jpg");
             background-position: center;
@@ -78,7 +97,7 @@ nav {
         }
 
         @include mobile {
-            grid-template-rows: 1fr 1fr auto;
+            grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr;
             .text {
                 background-color: #0E3A21;
@@ -96,15 +115,20 @@ nav {
         @include desktop {
             display: grid;
             grid-template-columns: 40% 60%;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr;
             min-height: 50vh;
 
             .text {
                 background-color: #0E3A21;
                 color: #ccc;
-                padding: 5%;
+                padding: 5% 10%;
 
                 .header {
+                    position: absolute;
+                    left: 38%;
+                    background-color: rgba(0, 0, 0, .5);
+                    border-radius: 10px;
+                    padding: 0 10px;
                     font-size: 5em;
                 }
             }

@@ -66,7 +66,38 @@ nav a:hover {
   text-align: center;
 }
 
+@media (max-width: 840px) {
+  #content #mission {
+    padding: .1px;
+  }
+  #content #mission .header {
+    width: 50%;
+    margin-left: 25%;
+    border-top: solid 3px #ccc;
+    border-bottom: solid 3px #ccc;
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  #content #mission .body {
+    width: 80%;
+    padding-bottom: 30px;
+    margin: 0 10%;
+  }
+}
+
 @media (min-width: 840px) {
+  #content #mission {
+    min-height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #content #mission .header {
     font-size: 5em;
     padding: 50px 0 20px 0;
@@ -104,11 +135,24 @@ nav a:hover {
     text-align: center;
   }
   #content #services .text .header {
+    position: relative;
+    top: -70px;
+    left: 50px;
+    color: #0E3A21;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
     font-size: 2em;
+    width: 50%;
+    margin-left: 25%;
+  }
+  #content #services .text .body {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 30px;
   }
   #content #services .image-container {
-    -ms-grid-row: 2;
-        grid-row-start: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
   }
 }
 
@@ -254,6 +298,49 @@ nav a:hover {
   #content #testimonial-container .testimonial-text .name {
     float: right;
     font-size: 1.5em;
+  }
+}
+
+#content #package-bullets {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("weights.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("weights.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media (max-width: 840px) {
+  #content #package-bullets .header {
+    font-size: 2em;
+    color: rgba(204, 204, 204, 0.5);
+    padding: 10%;
+  }
+  #content #package-bullets #bullets {
+    width: 80%;
+    margin: auto;
+  }
+  #content #package-bullets .bullet {
+    padding-bottom: 10px;
+    color: #5f5;
+    list-style-image: url(list-icon.svg);
+  }
+}
+
+@media (min-width: 840px) {
+  #content #package-bullets .header {
+    font-size: 5em;
+    color: rgba(204, 204, 204, 0.5);
+    padding: 50px;
+  }
+  #content #package-bullets #bullets {
+    width: 50%;
+    margin-left: 40%;
+    color: #ccc;
+    font-size: 2em;
+  }
+  #content #package-bullets .bullet {
+    padding-bottom: 10px;
   }
 }
 /*# sourceMappingURL=index.css.map */

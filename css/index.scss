@@ -70,7 +70,28 @@ nav {
         background-color: #444;
         text-align: center;
 
+        @include mobile {
+            padding: .1px;
+            .header {
+                width: 50%;
+                margin-left: 25%;
+                border-top: solid 3px #ccc;
+                border-bottom: solid 3px #ccc;
+                font-size: 2em;
+                margin-top: 20px;
+            }
+            .body {
+                width: 80%;
+                padding-bottom: 30px;
+                margin: 0 10%;
+            }
+        }
+
         @include desktop {
+            min-height: 50vh;
+            display: flex;
+            align-content: center;
+            flex-direction: column;
             .header {
                 font-size: 5em;
                 padding: 50px 0 20px 0;
@@ -104,11 +125,24 @@ nav {
                 color: #ccc;
                 text-align: center;
                 .header {
+                    position: relative;
+                    top: -70px;
+                    left: 50px;
+                    color: #0E3A21;
+                    border-radius: 10px;
+                    background-color: rgba(255, 255, 255, .5);
                     font-size: 2em;
+                    width: 50%;
+                    margin-left: 25%;
+                }
+                .body {
+                    width: 80%;
+                    margin: auto;
+                    padding-bottom: 30px;
                 }
             }
             .image-container {
-                grid-row-start: 2;
+                grid-row-start: 1;
             }
         }
 
@@ -227,5 +261,49 @@ nav {
                 }
             }
         }
-    }    
+    } 
+    
+    #package-bullets {
+        background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("weights.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+
+        @include mobile {
+            .header {
+                font-size: 2em;
+                color: rgba(204,204,204, 0.5);
+                padding: 10%;
+            }
+
+            #bullets {
+                width: 80%;
+                margin: auto;
+            }
+
+            .bullet {
+                padding-bottom: 10px;
+                color: #5f5;
+                list-style-image: url(list-icon.svg);
+            }
+        }
+
+        @include desktop {
+            .header {
+                font-size: 5em;
+                color: rgba(204,204,204, 0.5);
+                padding: 50px;
+            }
+            #bullets {
+                width: 50%;
+                margin-left: 40%;
+                color: #ccc;
+                font-size: 2em;
+            }
+            .bullet {
+                padding-bottom: 10px;
+            }
+        }
+    }
 }

@@ -67,18 +67,18 @@ nav {
     }
 
     #mission {
-        background-color: #444;
+        background-color: #ccc;
         text-align: center;
+        color: #0E3A21;
 
         @include mobile {
             padding: .1px;
             .header {
                 width: 50%;
-                margin-left: 25%;
-                border-top: solid 3px #ccc;
-                border-bottom: solid 3px #ccc;
-                font-size: 2em;
-                margin-top: 20px;
+                border-top: solid 3px #0E3A21;
+                border-bottom: solid 3px #0E3A21;
+                font-size: 3em;
+                margin: 30px 25% 30px 25%;
             }
             .body {
                 width: 80%;
@@ -92,10 +92,13 @@ nav {
             display: flex;
             align-content: center;
             flex-direction: column;
+            padding: 50px 0 0 0;
             .header {
                 font-size: 5em;
-                padding: 50px 0 20px 0;
-                margin: 0;
+                margin: 0 0 20px 10vw;
+                width: 80vw;
+                border-top: 3px solid #0E3A21;
+                border-bottom: 3px solid #0E3A21;
             }
             .body {
                 width: 80vw;
@@ -127,18 +130,20 @@ nav {
                 .header {
                     position: relative;
                     top: -70px;
-                    left: 50px;
+                    left: 10%;
                     color: #0E3A21;
                     border-radius: 10px;
                     background-color: rgba(255, 255, 255, .5);
                     font-size: 2em;
                     width: 50%;
                     margin-left: 25%;
+                    margin: 0;
+                    padding: 0;
                 }
                 .body {
                     width: 80%;
                     margin: auto;
-                    padding-bottom: 30px;
+                    padding-bottom: 2em;
                 }
             }
             .image-container {
@@ -196,6 +201,23 @@ nav {
                 grid-row-start: 2;
                 color: #5f5;
                 background-color: #444;
+                .header {
+                    position: relative;
+                    top: -70px;
+                    left: 40%;
+                    font-size: 2em;
+                    background-color: rgba(0, 0, 0, .5);
+                    width: 50%;
+                    text-align: center;
+                    border-radius: 10px;
+                    padding: 0;
+                    margin: 0;
+                }
+                .body {
+                    width: 80%;
+                    margin: auto;
+                    padding-bottom: 2em;
+                }
             }
         }
 
@@ -226,8 +248,6 @@ nav {
         }
     }  
     #testimonial-container {
-        display: flex;
-
         .image-container {
             background-image: url("gym.jpg");
             background-position: center;
@@ -236,10 +256,45 @@ nav {
         }
 
         @include mobile {
+            background-color: #ccc;
+            color: #0E3A21;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: .1px;
+            .image-container {
+                min-height: 200px;
+                width: 200px;
+                border-radius: 100%;
+                margin: 5%;
+            }
 
+            .testimonial-text {
+                background-color: rgba(255, 255, 255, .5);
+                position: relative;
+                top: -70px;
+                left: 35%;
+                width: 50%;
+                margin: 0;
+                margin-bottom: -40px;
+                .quote {
+                    padding-top: 10px;
+                    width: 90%;
+                    margin: auto;
+                    text-align: center;
+                }
+                .name {
+                    width: 90%;
+                    margin: auto;
+                    text-align: right;
+                    padding-bottom: 10px;
+                }
+
+            }
         }
 
         @include desktop {
+            display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
@@ -268,7 +323,7 @@ nav {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100vh;
+        min-height: 100vh;
 
         @include mobile {
             .header {
@@ -285,11 +340,12 @@ nav {
             .bullet {
                 padding-bottom: 10px;
                 color: #5f5;
-                list-style-image: url(list-icon.svg);
+                list-style-image: url(list-icon.png);
             }
         }
 
         @include desktop {
+            padding: .1px;
             .header {
                 font-size: 5em;
                 color: rgba(204,204,204, 0.5);
@@ -297,12 +353,13 @@ nav {
             }
             #bullets {
                 width: 50%;
-                margin-left: 40%;
+                margin: 0 0 50px 40%;
                 color: #ccc;
-                font-size: 2em;
+                font-size: 1em;
             }
             .bullet {
                 padding-bottom: 10px;
+                list-style-image: url(list-icon.png);
             }
         }
     }

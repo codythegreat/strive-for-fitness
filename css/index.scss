@@ -323,7 +323,7 @@ nav {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 100vh;
+        min-height: 50vh;
 
         @include mobile {
             .header {
@@ -355,7 +355,7 @@ nav {
                 width: 50%;
                 margin: 0 0 50px 40%;
                 color: #ccc;
-                font-size: 1em;
+                font-size: 1.3em;
             }
             .bullet {
                 padding-bottom: 10px;

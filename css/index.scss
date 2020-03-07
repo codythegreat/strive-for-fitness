@@ -10,27 +10,36 @@ $desktop: 840px;
   }
 }
 
+$color-text-primary: #373F51;
+$color-text-primary-hover: #484F62;
+$color-text-secondary: #E7ECEF;
+$color-text-secondary-hover: #D6DBDE;
+$color-text-red: #F05D5E;
+$color-dark: #0A0908;
+$color-gray: #959FB6;
+
 body {
-    color: #9f9;
+    color: $color-text-primary;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-size: 1.2em;
 }
     
 nav {
     position: fixed;
     top: 0;
-    background-color: #222;
-    color: #cfc;
+    background-color: $color-dark;
+    color: $color-text-secondary-hover;
     i {
-        color: #9f9;
+        color: $color-text-secondary;
     }
 
     a {
-        color: #9f9;
+        color: $color-text-secondary;
     }
     a:hover {
-        color: #cfc;
+        color: $color-text-secondary-hover;
     }
 }
 
@@ -55,7 +64,7 @@ nav {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: #5f5; 
+            color: $color-text-secondary; 
             p {
                 visibility: hidden;
                 font-size: 2.5rem;
@@ -67,16 +76,16 @@ nav {
     }
 
     #mission {
-        background-color: #ccc;
+        background-color: $color-gray;
         text-align: center;
-        color: #0E3A21;
+        color: $color-text-primary;
 
         @include mobile {
             padding: .1px;
             .header {
                 width: 50%;
-                border-top: solid 3px #0E3A21;
-                border-bottom: solid 3px #0E3A21;
+                border-top: solid 3px $color-dark;
+                border-bottom: solid 3px $color-dark;
                 font-size: 3em;
                 margin: 30px 25% 30px 25%;
             }
@@ -97,8 +106,8 @@ nav {
                 font-size: 5em;
                 margin: 0 0 20px 10vw;
                 width: 80vw;
-                border-top: 3px solid #0E3A21;
-                border-bottom: 3px solid #0E3A21;
+                border-top: 3px solid $color-dark;
+                border-bottom: 3px solid $color-dark;
             }
             .body {
                 width: 80vw;
@@ -114,7 +123,7 @@ nav {
     #services {
         display: grid;
         .image-container {
-            background-image: url("gym.jpg");
+            background-image: url("services.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -124,14 +133,14 @@ nav {
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr;
             .text {
-                background-color: #0E3A21;
-                color: #ccc;
+                background-color: $color-dark;
+                color: $color-text-red;
                 text-align: center;
                 .header {
                     position: relative;
                     top: -70px;
                     left: 10%;
-                    color: #0E3A21;
+                    color: $color-dark;
                     border-radius: 10px;
                     background-color: rgba(255, 255, 255, .5);
                     font-size: 2em;
@@ -143,7 +152,7 @@ nav {
                 .body {
                     width: 80%;
                     margin: auto;
-                    padding-bottom: 2em;
+                    padding-bottom: 3em;
                 }
             }
             .image-container {
@@ -158,8 +167,8 @@ nav {
             min-height: 50vh;
 
             .text {
-                background-color: #0E3A21;
-                color: #ccc;
+                background-color: $color-dark;
+                color: $color-text-secondary;
                 padding: 5% 10%;
 
                 .header {
@@ -199,13 +208,14 @@ nav {
             }
             .training-text {
                 grid-row-start: 2;
-                color: #5f5;
-                background-color: #444;
+                color: $color-text-secondary;
+                background-color: $color-gray;
                 .header {
                     position: relative;
                     top: -70px;
                     left: 40%;
                     font-size: 2em;
+                    color: $color-text-secondary;
                     background-color: rgba(0, 0, 0, .5);
                     width: 50%;
                     text-align: center;
@@ -216,7 +226,7 @@ nav {
                 .body {
                     width: 80%;
                     margin: auto;
-                    padding-bottom: 2em;
+                    padding-bottom: 3em;
                 }
             }
         }
@@ -230,9 +240,9 @@ nav {
                 grid-row-start: 1;
             }
             .training-text {
-                color: #0E3A21;
+                color: $color-text-primary;
                 grid-column-start: 2;
-                background-color: #ccc;
+                background-color: $color-gray;
                 display: flex;
                 justify-content: center;
                 padding: 5% 10%;
@@ -249,28 +259,28 @@ nav {
     }  
     #testimonial-container {
         .image-container {
-            background-image: url("gym.jpg");
-            background-position: center;
+            background-image: url("johndoe.jpg");
+            background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
         @include mobile {
-            background-color: #ccc;
-            color: #0E3A21;
+            background-color: $color-dark;
+            color: $color-text-red;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: .1px;
             .image-container {
-                min-height: 200px;
-                width: 200px;
+                min-height: 150px;
+                width: 150px;
                 border-radius: 100%;
                 margin: 5%;
             }
 
             .testimonial-text {
-                background-color: rgba(255, 255, 255, .5);
+                background-color: rgba(255, 255, 255, .3);
                 position: relative;
                 top: -70px;
                 left: 35%;
@@ -298,7 +308,8 @@ nav {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            background-color: #444;
+            background-color: $color-dark;
+            color: $color-text-red;
             .image-container {
                 height: 300px;
                 min-width: 300px;
@@ -308,11 +319,11 @@ nav {
             .testimonial-text {
                 margin-right: 10vw;
                 .quote {
-                    font-size: 2em;
+                    font-size: 1.5em;
                 }
                 .name {
                     float: right;
-                    font-size: 1.5em;
+                    font-size: 1.2em;
                 }
             }
         }
@@ -328,7 +339,7 @@ nav {
         @include mobile {
             .header {
                 font-size: 2em;
-                color: rgba(204,204,204, 0.5);
+                color: $color-text-secondary;
                 padding: 10%;
             }
 
@@ -339,7 +350,7 @@ nav {
 
             .bullet {
                 padding-bottom: 10px;
-                color: #5f5;
+                color: $color-text-secondary;
                 list-style-image: url(list-icon.png);
             }
         }
@@ -348,14 +359,14 @@ nav {
             padding: .1px;
             .header {
                 font-size: 5em;
-                color: rgba(204,204,204, 0.5);
+                color: $color-text-secondary;
                 padding: 50px;
             }
             #bullets {
                 width: 50%;
                 margin: 0 0 50px 40%;
-                color: #ccc;
-                font-size: 1.3em;
+                color: $color-text-secondary;
+                font-size: 1.2em;
             }
             .bullet {
                 padding-bottom: 10px;

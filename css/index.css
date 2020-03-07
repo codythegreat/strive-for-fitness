@@ -1,27 +1,28 @@
 body {
-  color: #9f9;
+  color: #373F51;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-size: 1.2em;
 }
 
 nav {
   position: fixed;
   top: 0;
-  background-color: #222;
-  color: #cfc;
+  background-color: #0A0908;
+  color: #D6DBDE;
 }
 
 nav i {
-  color: #9f9;
+  color: #E7ECEF;
 }
 
 nav a {
-  color: #9f9;
+  color: #E7ECEF;
 }
 
 nav a:hover {
-  color: #cfc;
+  color: #D6DBDE;
 }
 
 #content #banner {
@@ -47,7 +48,7 @@ nav a:hover {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #5f5;
+  color: #E7ECEF;
 }
 
 #content #banner #banner-text p {
@@ -62,9 +63,9 @@ nav a:hover {
 }
 
 #content #mission {
-  background-color: #ccc;
+  background-color: #959FB6;
   text-align: center;
-  color: #0E3A21;
+  color: #373F51;
 }
 
 @media (max-width: 840px) {
@@ -73,8 +74,8 @@ nav a:hover {
   }
   #content #mission .header {
     width: 50%;
-    border-top: solid 3px #0E3A21;
-    border-bottom: solid 3px #0E3A21;
+    border-top: solid 3px #0A0908;
+    border-bottom: solid 3px #0A0908;
     font-size: 3em;
     margin: 30px 25% 30px 25%;
   }
@@ -103,8 +104,8 @@ nav a:hover {
     font-size: 5em;
     margin: 0 0 20px 10vw;
     width: 80vw;
-    border-top: 3px solid #0E3A21;
-    border-bottom: 3px solid #0E3A21;
+    border-top: 3px solid #0A0908;
+    border-bottom: 3px solid #0A0908;
   }
   #content #mission .body {
     width: 80vw;
@@ -119,7 +120,7 @@ nav a:hover {
 }
 
 #content #services .image-container {
-  background-image: url("gym.jpg");
+  background-image: url("services.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,15 +134,15 @@ nav a:hover {
         grid-template-columns: 1fr;
   }
   #content #services .text {
-    background-color: #0E3A21;
-    color: #ccc;
+    background-color: #0A0908;
+    color: #F05D5E;
     text-align: center;
   }
   #content #services .text .header {
     position: relative;
     top: -70px;
     left: 10%;
-    color: #0E3A21;
+    color: #0A0908;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.5);
     font-size: 2em;
@@ -153,7 +154,7 @@ nav a:hover {
   #content #services .text .body {
     width: 80%;
     margin: auto;
-    padding-bottom: 2em;
+    padding-bottom: 3em;
   }
   #content #services .image-container {
     -ms-grid-row: 1;
@@ -172,8 +173,8 @@ nav a:hover {
     min-height: 50vh;
   }
   #content #services .text {
-    background-color: #0E3A21;
-    color: #ccc;
+    background-color: #0A0908;
+    color: #E7ECEF;
     padding: 5% 10%;
   }
   #content #services .text .header {
@@ -219,14 +220,15 @@ nav a:hover {
   #content #training-services .training-text {
     -ms-grid-row: 2;
         grid-row-start: 2;
-    color: #5f5;
-    background-color: #444;
+    color: #E7ECEF;
+    background-color: #959FB6;
   }
   #content #training-services .training-text .header {
     position: relative;
     top: -70px;
     left: 40%;
     font-size: 2em;
+    color: #E7ECEF;
     background-color: rgba(0, 0, 0, 0.5);
     width: 50%;
     text-align: center;
@@ -237,7 +239,7 @@ nav a:hover {
   #content #training-services .training-text .body {
     width: 80%;
     margin: auto;
-    padding-bottom: 2em;
+    padding-bottom: 3em;
   }
 }
 
@@ -256,10 +258,10 @@ nav a:hover {
         grid-row-start: 1;
   }
   #content #training-services .training-text {
-    color: #0E3A21;
+    color: #373F51;
     -ms-grid-column: 2;
         grid-column-start: 2;
-    background-color: #ccc;
+    background-color: #959FB6;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -279,16 +281,16 @@ nav a:hover {
 }
 
 #content #testimonial-container .image-container {
-  background-image: url("gym.jpg");
-  background-position: center;
+  background-image: url("johndoe.jpg");
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @media (max-width: 840px) {
   #content #testimonial-container {
-    background-color: #ccc;
-    color: #0E3A21;
+    background-color: #0A0908;
+    color: #F05D5E;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -302,13 +304,13 @@ nav a:hover {
     padding: .1px;
   }
   #content #testimonial-container .image-container {
-    min-height: 200px;
-    width: 200px;
+    min-height: 150px;
+    width: 150px;
     border-radius: 100%;
     margin: 5%;
   }
   #content #testimonial-container .testimonial-text {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     position: relative;
     top: -70px;
     left: 35%;
@@ -345,7 +347,8 @@ nav a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #444;
+    background-color: #0A0908;
+    color: #F05D5E;
   }
   #content #testimonial-container .image-container {
     height: 300px;
@@ -357,11 +360,11 @@ nav a:hover {
     margin-right: 10vw;
   }
   #content #testimonial-container .testimonial-text .quote {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   #content #testimonial-container .testimonial-text .name {
     float: right;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
 
@@ -377,7 +380,7 @@ nav a:hover {
 @media (max-width: 840px) {
   #content #package-bullets .header {
     font-size: 2em;
-    color: rgba(204, 204, 204, 0.5);
+    color: #E7ECEF;
     padding: 10%;
   }
   #content #package-bullets #bullets {
@@ -386,7 +389,7 @@ nav a:hover {
   }
   #content #package-bullets .bullet {
     padding-bottom: 10px;
-    color: #5f5;
+    color: #E7ECEF;
     list-style-image: url(list-icon.png);
   }
 }
@@ -397,14 +400,14 @@ nav a:hover {
   }
   #content #package-bullets .header {
     font-size: 5em;
-    color: rgba(204, 204, 204, 0.5);
+    color: #E7ECEF;
     padding: 50px;
   }
   #content #package-bullets #bullets {
     width: 50%;
     margin: 0 0 50px 40%;
-    color: #ccc;
-    font-size: 1.3em;
+    color: #E7ECEF;
+    font-size: 1.2em;
   }
   #content #package-bullets .bullet {
     padding-bottom: 10px;
